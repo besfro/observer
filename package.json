@@ -1,0 +1,19 @@
+{
+  "name": "observer",
+  "version": "1.0.0",
+  "description": "data binding",
+  "main": "index.js",
+  "scripts": {
+    "test": "anywhere 8888"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/besfro/observer"
+  },
+  "keywords": [
+    "observer",
+    "data binding"
+  ],
+  "author": "clc",
+  "license": "MIT"
+}

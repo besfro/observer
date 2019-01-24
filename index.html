@@ -1,0 +1,19 @@
+<div id="app">
+    <input type="text" v-model="jsonText.text">
+    <div>{{message}}</div>
+    <div>{{jsonText.text}}</div>
+</div>
+
+<script type="module">
+    import Vue from './vue/vue.js'
+
+    const vue = window.vue = new Vue({
+        el: '#app',
+        data: {
+            message: 'hello world',
+            jsonText: {
+                text: 'hello vue'
+            }
+        }
+    })
+</script>
