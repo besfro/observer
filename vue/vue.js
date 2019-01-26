@@ -7,7 +7,7 @@ export default class Vue {
         this.$data = opts.data
         
         if(this.$el) {
-            new Observer(this.$data)
+            new Observer(this)
             new Compile(this.$el, this)
         }
     }

@@ -1,7 +1,12 @@
 <div id="app">
     <input type="text" v-model="jsonText.text">
-    <div>{{message}}</div>
+    <div v-text="message"></div>
+    <div>{{message}}{{jsonText.text}} </div>
     <div>{{jsonText.text}}</div>
+    <div>{{list.arr[0].name}}</div>
+    <div v-for="item in list">
+        {{list.item}}
+    </div>
 </div>
 
 <script type="module">
@@ -13,6 +18,11 @@
             message: 'hello world',
             jsonText: {
                 text: 'hello vue'
+            },
+            list: {
+                arr: [
+                    {name: 'igo'}
+                ]
             }
         }
     })

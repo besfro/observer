@@ -19,11 +19,12 @@ export default class Tools {
     }
 
     static getTextVal(data, expr, process) {
-        const reg = /\{\{(.+)\}\}/g
+        const reg = /\{\{([^}]+)\}\}/g
         return expr.replace(reg, (...args) => {
             const value = args[1]
             process && process(value)
             return this.getVal(data, value)
         })
     }
+
 }

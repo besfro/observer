@@ -1,13 +1,16 @@
 export default class Dep {
     constructor() {
-        this.subs = []
+        this.subs = {}
     }
 
-    addSub(watcher) {
-        this.subs.push(watcher)
+    addSub(key, watcher) {
+        const subs = this.subs
+        subs[key]
+            ? subs[key].push(watcher)
+            : (subs[key] = [watcher])
     }
 
-    notify() {
-        this.subs.forEach(watcher => watcher.update())
+    notify(key) {
+        this.subs[key] && this.subs[key].forEach(watcher => watcher.update())
     }
 }
